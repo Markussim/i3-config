@@ -105,6 +105,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10: Spotify"
 
+set $terminal "exec feh --bg-scale /home/markus/Pictures/backgroundcolor_terminal.png"
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -119,7 +121,7 @@ bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+2 move container to workspace $ws2 
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
@@ -180,7 +182,7 @@ bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
 
-# Screen brightness controls
+# Screen brightness controls (Does not work)
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
