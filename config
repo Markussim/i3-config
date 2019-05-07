@@ -204,3 +204,6 @@ bindsym $mod+t exec gnome-terminal -e htop
 
 # Open custom programs
 bindsym $mod+z exec firefox
+
+#Compton
+exec_always compton -f
