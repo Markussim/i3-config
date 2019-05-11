@@ -97,7 +97,7 @@ bindsym $mod+a focus parent
 set $ws1 "1: Firefox"
 set $ws2 "2: Terminals"
 set $ws3 "3: Discord"
-set $ws4 "4"
+set $ws4 "4: Development/Git"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -197,7 +197,7 @@ exec spotify
 bindsym Print exec maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
 
 # Lock computer
-bindsym $mod+x exec ~/usefull-scripts/scripts/close_discord_and_lock_computer.sh
+bindsym $mod+x exec ~/usefull-scripts/scripts/close_discord_and_lock_computer
 
 # Open htop in new terminal window
 bindsym $mod+t exec gnome-terminal -e htop
@@ -206,4 +206,4 @@ bindsym $mod+t exec gnome-terminal -e htop
 bindsym $mod+z exec firefox
 
 #Compton
-exec_always compton -f
+#exec_always compton -f
