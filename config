@@ -98,7 +98,7 @@ set $ws1 "1: Firefox"
 set $ws2 "2: Terminals"
 set $ws3 "3: Discord"
 set $ws4 "4: Development/Git"
-set $ws5 "5"
+set $ws5 "5: Second monitor"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -173,7 +173,7 @@ bar {
 }
 
 exec_always bluetoothctl connect E4:22:A5:BD:36:4E
-exec_always /home/markus/.screenlayout/screen_layout.sh
+exec_always /home/markus/.screenlayout/screen_layout_dual.sh
 exec_always feh --bg-scale /home/markus/Pictures/Backgroundcolor_logo.png
 exec_always --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 
@@ -207,3 +207,38 @@ bindsym $mod+z exec firefox
 
 #Compton
 #exec_always compton -f
+
+# Change brightness on the fly
+
+bindsym $mod+c mode "brightness-usefull-scripts"
+
+mode "brightness-usefull-scripts" {
+	bindsym 1 exec ~/usefull-scripts/scripts/screen 10
+	bindsym 2 exec ~/usefull-scripts/scripts/screen 20
+	bindsym 3 exec ~/usefull-scripts/scripts/screen 30
+	bindsym 4 exec ~/usefull-scripts/scripts/screen 40
+	bindsym 5 exec ~/usefull-scripts/scripts/screen 50
+	bindsym 6 exec ~/usefull-scripts/scripts/screen 60
+	bindsym 7 exec ~/usefull-scripts/scripts/screen 70
+	bindsym 8 exec ~/usefull-scripts/scripts/screen 80
+	bindsym 9 exec ~/usefull-scripts/scripts/screen 90
+	bindsym 0 exec ~/usefull-scripts/scripts/screen 100
+	
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
+
+
+
+
+
+#bindsym Ctrl+b+1 exec screen 10
+#bindsym Ctrl+b+2 exec screen 20
+#bindsym Ctrl+b+3 exec screen 30
+#bindsym Ctrl+b+4 exec screen 40
+#bindsym Ctrl+b+5 exec screen 50
+#bindsym Ctrl+b+6 exec screen 60
+#bindsym Ctrl+b+7 exec screen 70
+#bindsym Ctrl+b+8 exec screen 80
+#bindsym Ctrl+b+9 exec screen 90
+#bindsym Ctrl+b+0 exec screen 100
