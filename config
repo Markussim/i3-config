@@ -173,8 +173,8 @@ bar {
 }
 
 exec_always bluetoothctl connect E4:22:A5:BD:36:4E
-exec_always /home/markus/.screenlayout/screen_layout_dual.sh
-exec_always feh --bg-scale /home/markus/Pictures/Backgroundcolor_logo.png
+#exec_always /home/markus/.screenlayout/screen_layout_dual.sh
+exec_always feh --bg-scale /home/markus/Downloads/map.png
 exec_always --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 
 # Pulse Audio controls
@@ -206,7 +206,7 @@ bindsym $mod+t exec gnome-terminal -e htop
 bindsym $mod+z exec firefox
 
 #Compton
-#exec_always compton -f
+exec_always compton
 
 # Change brightness on the fly
 
